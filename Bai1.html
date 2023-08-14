@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Get value from DOM</p>
+    <input id="box1" oninput="myFunction1()" />
+    <p>Get value from event object</p>
+    <input id="box2" oninput="myFunction2(event)" />
+    <script>
+      let inputBox1 = document.getElementById("box1");
+      function myFunction1() {
+        let boxValue1 = inputBox1.value;
+        console.log(boxValue1);
+      }
+      function myFunction2(e) {
+          console.log(e.target.value)
+        }
+    </script>
+  </body>
+</html>
